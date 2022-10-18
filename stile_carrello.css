@@ -1,0 +1,19 @@
+html,
+body {
+    background-image: linear-gradient(to right, rgb(82, 65, 65),rgba(165, 158, 182, 0.849));
+    color: #ffffff;
+    font-family: consolas;
+    font-size: 20px;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.lista .giochi .gioco .seleziona {
+    width: 300px;
+    height: 300px;
+}
