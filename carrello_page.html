@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrello di Game Store</title>
+    <link rel="stylesheet" href="css/stile_carrello.css" media="screen" type="text/css">
+</head>
+<body>
+    <form action="use_db.php" method="post">
+    <div class="titolo">
+        <h1 align="center">
+            <img src="carrello.png" alt="carrello" width="50px">Lista del desiderio
+        </h1>
+    </div>
+
+    <div class="lista">
+        <div class="giochi">
+            <table border="0" align="center">
+                <tr>
+                    <th>Copertina</th>
+                    <th align="left">Nome</th>
+                    <th>Prezzo</th>
+                    <th>Operazione</th>
+                </tr>
+                
+            <tr>
+                <div class="gioco">
+                   <td width="300px"> 
+                        <a href="https://store.epicgames.com/it/p/fifa-23" target="_blank">
+                        <div class="img" style="text-align:center;">
+                            <img src="img/FIFA23.jpg" title="FIFA23" width="400px">
+                        </div>
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="https://store.epicgames.com/it/p/fifa-23" target="_blank">
+                            <div class="name" style="text-align:left;">FIFA23</div>
+                        </a>
+                    </td>
+
+                    <td>
+                            <div class="prezzo" style="text-align:center;">Prezzo:59.99€</div>
+                    </td> 
+
+                    <td>
+                        <div class="seleziona" style="text-align:center;">
+                            <input type="checkbox" name="gioco_1" id="gioco_1">
+                        </div> 
+
+                            <div class="cancella" style="text-align:center;">
+                                <input type="submit" value="cancella">
+                            </div>
+                    </td>
+                </div>
+            </tr>
+
+            <tr>
+                <div class="gioco">
+                   <td width="300px"> 
+                        <a href="https://store.epicgames.com/it/p/fifa-23" target="_blank">
+                        <div class="img" style="text-align:center;">
+                            <img src="img/GTA5.jpg" title="GTA5" width="400px">
+                        </div>
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="https://store.epicgames.com/it/p/fifa-23" target="_blank">
+                            <div class="name" style="text-align:left;">GTA5</div>
+                        </a>
+                    </td>
+
+                    <td>
+                            <div class="prezzo" style="text-align:center;">Prezzo:29.99€</div>
+                    </td> 
+
+                    <td>
+                        <div class="seleziona" style="text-align:center;">
+                            <input type="checkbox" name="gioco_2" id="gioco_2">
+                        </div> 
+
+                        <div class="cancella" style="text-align:center;">
+                            <input type="submit" value="cancella">
+                        </div>
+                        
+                    </td>
+                </div>
+            </tr>
+                <tr>
+                    <div class="gioco">
+                   <td width="50%"> 
+                        <a href="https://store.epicgames.com/it/p/fifa-23" target="_blank">
+                        <div class="img" style="text-align:center;">
+                            <img src="img/red.jpg" title="Red dead redeption II" width="400px">
+                        </div>
+                        </a>    
+                    </td>
+
+                    <td width="10%">
+                        <a href="https://store.epicgames.com/it/p/fifa-23" target="_blank">
+                            <div class="name" style="text-align:left;">Red dead redeption II</div>
+                        </a>
+                    </td>
+
+                    <td width="10%">
+                            <div class="prezzo" style="text-align:center;">Prezzo:89.99€</div>
+                    </td> 
+
+                    <td width="30%">
+                           <div class="seleziona" style="text-align:center;">
+                                <input type="checkbox" name="gioco_3" id="gioco_3">
+                            </div> 
+                            <div class="cancella" style="text-align:center;">
+                                <input type="submit" value="cancella">
+                            </div>
+                    </td>
+                </div>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="Importo" style="text-align:center;">
+                         Importo Totale:
+                        </div>  
+                    </td>
+                    <td colspan="2">
+                        <div class="chekout" style="text-align:center;">
+                        <input type="submit" name="chekout" id="chekout" value="chekout">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>
+</body>
+</html>
