@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 session_start();
 
@@ -76,7 +75,7 @@ session_start();
 	</script>
 </body>
 </html>
-=======
+
 <?php
 session_start();
 
@@ -154,4 +153,4 @@ session_start();
 	</script>
 </body>
 </html>
->>>>>>> 825adae (prova)
+
