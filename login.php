@@ -32,6 +32,9 @@ session_start();
 					echo"<p style='color: red;'>Hai sbagliato Email o Password.</p>";
 				}
 			?>
+			<div class="Ritrova">
+				<a href="Ritrova_pw.php" style="font-size: 15px; color: blue;">Ho dimenticato password</a><br>
+			</div>
 			<input type="submit" name="login" value="Login" class="btn">
 			<input type="submit" onclick="window.location.href='registra.php'" value="Registra"class="btn">
 		</form>

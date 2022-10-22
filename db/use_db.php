@@ -9,6 +9,7 @@ $email = $_POST['Email'];
 $pass = $_POST['Password'];
 if (isset($_POST['registra'])) {
     unset($_POST['registra']);
+    unset($_POST['conf_pw']);
     $trovato = $client->leggi('utenti', "Email='$email'", "Email", "1", "Email");
     if($trovato == false){
         $client->inserisci("utenti", $_POST);
