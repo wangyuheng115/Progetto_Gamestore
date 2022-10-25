@@ -1,0 +1,60 @@
+html,body{
+    background-image: linear-gradient(to right, rgb(82, 65, 65),rgba(165, 158, 182, 0.849));
+    box-shadow: none;
+}
+
+#box{
+    border: solid 3px black;
+    background:rgba(0 ,0 , 0, 30%);
+    width: auto;
+}
+
+
+.img{
+    width: 30px;
+}
+
+@media screen and (min-width:1400px) {
+    .img{
+    position: relative;
+    bottom:27px;
+    left: 280px;
+    }
+}
+
+@media screen and (max-width:1399.9px) and (min-width:1200px) {
+    .img{
+    position: relative;
+    bottom:27px;
+    left: 235px;
+    }
+}
+
+@media screen and (max-width:1199.9px) and (min-width:992px) {
+    .img{
+    position: relative;
+    bottom:27px;
+    left: 190px;
+    }
+}
+
+@media screen and (max-width:991.9px) and (min-width: 576px){
+    .img{
+    position: relative;
+    bottom:27px;
+    left: 130px;
+    }
+}
+
+@media screen and (max-width:575.9px){
+    /*Per pagina ritrova pw*/
+    div#buttone{
+        text-align: center;
+    }
+
+    .img{
+        position: relative;
+    float: right;
+    bottom:27px;
+    }
+}

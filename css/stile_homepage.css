@@ -1,11 +1,11 @@
-html,
-body {
+    html,
+    body {
     background-image: linear-gradient(to right, rgb(82, 65, 65),rgba(165, 158, 182, 0.849));
     color: #ffffff;
     font-family: consolas;
     font-size: 20px;
-    margin: 0;
-}
+    margin: 0;}
+
 .titolo input#login{
     background: url(../img/icon_login.png);
     width:50px; height:50px;

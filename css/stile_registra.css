@@ -1,0 +1,65 @@
+html,body{
+    background-image: linear-gradient(to right, rgb(82, 65, 65),rgba(165, 158, 182, 0.849));
+    background-repeat: no-repeat;
+    box-shadow: none;
+}
+
+#box{
+    border: solid 3px black;
+    background:rgba(0 ,0 , 0, 30%);
+    width: auto;
+}
+
+
+.img{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (min-width:1439px) {
+    .img{
+    position: relative;
+    top: 10px;
+    right: 30px;
+    }
+}
+
+@media screen and (max-width:1439px) and (min-width:1023px) {
+    .img{
+    position: relative;
+    top: 10px;
+    right: 30px;
+    }
+}
+
+@media screen and (max-width:1023px) and (min-width:767px) {
+    .img{
+    position: relative;
+    top: 10px;
+    right: 30px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .img{
+    position: relative;
+    bottom:27px;
+    left: 115px;
+    }
+}
+
+@media screen and (max-width:766.9px) and (min-width: 50px) {
+    .img{
+        
+    position: relative;
+    top:10px;
+    left: -30;
+    }
+}
+@media screen and (max-width:404px){
+    #box{
+        align-items: center;
+        border:0;
+        background:rgba(0, 0, 0, 0);
+    }
+}
