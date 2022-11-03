@@ -1,5 +1,21 @@
 <?php
-session_start();
+
+    $lang=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
+
+    $lang=strtolower(substr($lang,0,2));
+
+    if($lang=="it"){
+        include("languages/it.php");
+    }
+    elseif($lang=="fr"){
+        include("languages/fr.php");
+    }
+    else if ($lang=="en"){
+        include("languages/en.php");
+    }
+    else if ($lang=="zh"){
+        include("languages/zh.php");
+    }
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +36,7 @@ session_start();
 		<div class="box" id="box">
 			<div class="row">
 				<div class="col">
-					<h1 align="center"><img src="img/logo.png" width="50px" title="GameStore">Ritrova Password</h1>
+					<h1 align="center"><img src="img/logo.png" width="50px" title="GameStore"><?php echo $rpw['title'];?></h1>
 				</div>
 			</div>
 
@@ -29,12 +45,12 @@ session_start();
 					<form action="email.php" method="post" enctype="application/x-www-form-urlencoded">
 						<div class="form-floating ">
 							<input type="email" name="Email" id="email" required="required" class="form-control" placeholder="Inserisci Email" style="border: 0; border-bottom:2px solid black ; background: rgba(0 ,0 , 0, 0%);">
-							<label for="email">Email</label>
+							<label for="email"><?php echo $login['email'];?></label>
 						</div>
 						<p id="controll_email" style="font-size: 18px;" align="center"></p>
 				</div>
 				<div class="col-sm-3 p-2 col-xxl-3 col-xl-3" id="buttone">
-					<input type="submit" name="trova" value="Commit" class="btn btn-primary" id="buttone" />
+					<input type="submit" name="trova" value="<?php echo $rpw['commit'];?>" class="btn btn-primary" id="buttone" />
 				</div>
 
 
@@ -51,7 +67,7 @@ session_start();
 		$('#email').mouseleave(function() {
 			var email = $('#email').val();
 			if (email === "") {
-				document.getElementById("controll_email").innerHTML = ("<div class='alert alert-primary mt-3'> <strong>Inserisci</strong> il tuo email!</div>");
+				document.getElementById("controll_email").innerHTML = ("<div class='alert alert-primary mt-3'><?php echo $rpw['enteremail'];?></div>");
 			} else {
 				$.post("./db/Verifica_email.php", {
 					Email: email
@@ -59,9 +75,9 @@ session_start();
 					if (data.trova === 1) {
 						var email = document.querySelectorAll("input");
 						email[0].style.border = "solid 2px #53E652";
-						document.getElementById("controll_email").innerHTML = ("<div class='alert alert-success mt-3'> <strong>Email</strong> valido!</div>");
+						document.getElementById("controll_email").innerHTML = ("<div class='alert alert-success mt-3'><?php echo $rpw['validemail'];?></div>");
 					} else {
-						document.getElementById("controll_email").innerHTML = ("<div class='alert alert-danger mt-3'> <strong>Email</strong> non esiste!</div>");
+						document.getElementById("controll_email").innerHTML = ("<div class='alert alert-danger mt-3'><?php echo $rpw['noemail'];?></div>");
 						var email = document.querySelectorAll("input");
 						email[0].style.border = "solid 2px #f00";
 					}

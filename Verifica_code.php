@@ -1,5 +1,21 @@
 <?php
 
+    $lang=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
+
+    $lang=strtolower(substr($lang,0,2));
+
+    if($lang=="it"){
+        include("languages/it.php");
+    }
+    elseif($lang=="fr"){
+        include("languages/fr.php");
+    }
+    else if ($lang=="en"){
+        include("languages/en.php");
+    }
+    else if ($lang=="zh"){
+        include("languages/zh.php");
+    }
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +34,7 @@
 	<div class="box" id="box">	
 		<div class="row">
 			<div class="col">
-				<h1 align="center"><img src="img/logo.png" width="50px" title="GameStore">Ritrova Password</h1>
+				<h1 align="center"><img src="img/logo.png" width="50px" title="GameStore"><?php echo $rpw['title']?></h1>
 			</div>
 		</div>
 	
@@ -28,11 +44,11 @@
 				<div class="col-sm-4 offset-sm-4 col-xxl-4 offset-xxl-4 col-xl-4 offset-xl-4">
 					<div class="form-floating pb-3">
 						<input type="text" name="Code" id="code" required="required" maxlength="4" class="form-control" placeholder="Inserisci codice" style="border: 0; border-bottom:2px solid black ; background: rgba(0 ,0 , 0, 0%);">
-						<label for="Code">Codice</label>
+						<label for="Code"><?php echo $rpw['code']?></label>
 					</div>	
 				</div>
 				<div class="col-sm-3 p-2 col-xxl-3 col-xl-3" id="buttone">
-					<input type="submit" name="conferma" value="conferma" class="btn btn-primary">
+					<input type="submit" name="conferma" value="<?php echo $rpw['value']?>" class="btn btn-primary">
 				</div>
 			</div>
 		</form>

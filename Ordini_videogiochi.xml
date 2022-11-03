@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ordini>
+    <ordine>
+        <id>A001</id>
+        <gioco>FIFA23</gioco>
+        <forma>Carta di credito</forma>
+        <importo>19.9€</importo>
+        <data>02/11/2022</data>
+        <utente>Wang</utente>
+    </ordine>
+
+    <ordine>
+        <id>A002</id>
+        <gioco>GTA5</gioco>
+        <forma>Paypal</forma>
+        <importo>39.9€</importo>
+        <data>01/11/2022</data>
+        <utente>Giovanni</utente>
+    </ordine>
+
+    <ordine>
+        <id>A003</id>
+        <gioco>GTA4</gioco>
+        <forma>Carta di credito</forma>
+        <importo>9.9€</importo>
+        <data>01/11/2022</data>
+        <utente>Mario</utente>
+    </ordine>
+</ordini>

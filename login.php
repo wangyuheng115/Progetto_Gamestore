@@ -1,5 +1,21 @@
 <?php
-session_start();
+
+    $lang=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
+
+    $lang=strtolower(substr($lang,0,2));
+
+    if($lang=="it"){
+        include("languages/it.php");
+    }
+    elseif($lang=="fr"){
+        include("languages/fr.php");
+    }
+    else if ($lang=="en"){
+        include("languages/en.php");
+    }
+    else if ($lang=="zh"){
+        include("languages/zh.php");
+    }
 
 ?>
 <!DOCTYPE html>
@@ -84,8 +100,8 @@ session_start();
                             <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-8 offset-sm-2">
                                 <div class="email" align="center">
                                     <div class="form-floating ">
-                                        <input type="email" title="Inserisci il tuo email!" name="Email" id="email" required="required" class="form-control form-control-sm" placeholder="Inserisci Email" style="border: 0; border-bottom:2px solid black ; background: rgba(0 ,0 , 0, 0%);">
-                                        <label for="email">Email</label>
+                                        <input type="email" title="<?php echo $login['tooltipemail'];?>" name="Email" id="email" required="required" class="form-control form-control-sm" placeholder="Inserisci Email" style="border: 0; border-bottom:2px solid black ; background: rgba(0 ,0 , 0, 0%);">
+                                        <label for="email"> <?php echo $login['email'];?> </label>
                                     </div>
                                     <span id="controll_email" style="font-size: 18px;"></span>
                                 </div>
@@ -96,8 +112,8 @@ session_start();
                             <div class="col-sm-6 offset-sm-3">
                                 <div class="pw" align="center">
                                     <div class="form-floating ">
-                                        <input type="password" name="Password" title="Inserisci la password!" id="password" required="required" class="form-control form-control-sm" placeholder="Inserisci Password" style="border: 0; border-bottom:2px solid black ; background: rgba(0 ,0 , 0, 0%);">
-                                        <label for="password">Password</label>
+                                        <input type="password" name="Password" title="<?php echo $login['tooltippw'];?>" id="password" required="required" class="form-control form-control-sm" placeholder="Inserisci Password" style="border: 0; border-bottom:2px solid black ; background: rgba(0 ,0 , 0, 0%);">
+                                        <label for="password"><?php echo $login['pw'];?></label>
                                         <div class="img"><img src="img/no_pw.png" id="view_pw" width="25px" onclick="VisualizzaPassword()"></div>
                                     </div>
                                     <span id="controll_password" style="font-size: 18px;"></span>
@@ -113,7 +129,7 @@ session_start();
                         <div class="row">
                             <div class="col-12">
                                 <div class="Ritrova" align="center">
-                                    <a href="Ritrova_pw.php" style="font-size: 15px; color: blue;">Ho dimenticato password</a><br>
+                                    <a href="Ritrova_pw.php" style="font-size: 15px; color: blue;"><?php echo $login['rpw'];?></a><br>
                                 </div>
                             </div>
                         </div>
@@ -121,8 +137,8 @@ session_start();
                         <div class="row">
                             <div class="col-12">
                                 <div class="buttone" align="center">
-                                    <input type="submit" name="login" value="Login" class="btn btn-primary btn-lg" align="center">
-                                    <input type="submit" onclick="window.location.href='registra.php'" value="Registra" class="btn btn-primary btn-lg">
+                                    <input type="submit" name="login" value="<?php echo $login['login'];?>" class="btn btn-primary btn-lg" align="center">
+                                    <input type="submit" onclick="window.location.href='registra.php'" value="<?php echo $login['reg'];?>" class="btn btn-primary btn-lg">
                                 </div>
                             </div>
                         </div>
@@ -146,9 +162,9 @@ session_start();
                 if (data.trova === 0) {
                     var email = document.querySelectorAll("input");
                     email[0].style.border = "solid 2px #f00";
-                    document.getElementById("controll_email").innerHTML = "<font color=#f00>Email non esiste!";
+                    document.getElementById("controll_email").innerHTML = "<font color=#f00><?php echo $login['noemail'];?>";
                 } else {
-                    document.getElementById("controll_email").innerHTML = "<font color=#53E652>Email valido</font>";
+                    document.getElementById("controll_email").innerHTML = "<font color=#53E652><?php echo $login['validemail'];?></font>";
                     var email = document.querySelectorAll("input");
                     email[0].style.border = "solid 2px #53E652";
                 }
@@ -162,7 +178,7 @@ session_start();
                 Password: pw
             }, function(data) {
                 if (data.trova === 0) {
-                    document.getElementById("controll_password").innerHTML = "<font color=#f00>Password errato!";
+                    document.getElementById("controll_password").innerHTML = "<font color=#f00><?php echo $login['erorpw'];?>";
                 } else {
                     document.getElementById("controll_password").innerHTML = "";
                 }

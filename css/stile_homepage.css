@@ -1,139 +1,383 @@
     html,
     body {
-    background-image: linear-gradient(to right, rgb(82, 65, 65),rgba(165, 158, 182, 0.849));
-    color: #ffffff;
-    font-family: consolas;
-    font-size: 20px;
-    margin: 0;}
-
-    #btn_nav:hover{
-        color: #ffffff !important;
-        border-bottom:solid 3px #0062ff;
+        background-color: rgba(18, 18, 18);
+        color: #ffffff;
+        font-family: consolas;
+        font-size: 20px;
+        margin: 0;
     }
-.titolo input#login{
-    background: url(../img/icon_login.png);
-    width:50px; height:50px;
-    font-size: 50px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0);
-    background-size: 40px;
-    border: 0px;
-    position: absolute;
-    top: 0;
-    right: 10px;
-}
 
-.titolo input#carrello{
-    background-image: url(../img/carrello.png);
-    width:50px; height:50px;
-    font-size: 50px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0);
-    background-size: 50px;
-    border: 0px;
-    position: absolute;
-    top: 0;
-    right: 60px;
-}
+    img {
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    #top_5:hover {
+        background: #d5d5d599;
+    }
+
+    #select_nav:hover {
+        color: #ffffff !important;
+        border-bottom: solid 3px #0062ff;
+    }
+
+    #Utente {
+        background: url(../img/icon_login_white.png);
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0);
+        background-size: 40px;
+        border: 0px;
+    }
+
+    .Utente {
+        position: absolute;
+        right: -20px;
+    }
 
 
-.titolo input#login:hover{
-    opacity: 0.7;
-}
+    #Utente:hover {
+        opacity: 0.7;
+    }
 
-.titolo input#carrello:hover{
-    opacity: 0.7;
-}
-a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
+    #giochi_push:hover {
+        opacity: 0.8;
+        filter: brightness(105%);
+    }
 
-li {
-    list-style: none;
-    padding: 10px;
+    a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    li {
+        list-style: none;
+        padding: 10px;
+
+    }
+
+    #top_name {
+        font-size: 0.8rem;
+        word-wrap: normal;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    *::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        /**/
+    }
+
+    *::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background: #bfbfbf;
+        border-radius: 10px;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+        background: #333;
+    }
+
+    @media screen and (min-width:1400px) {
+        #paneltop5 {
+            overflow: auto;
+            width: 330px;
+            height: 540px;
+        }
+
+        #top_name {
+            font-size: 0.8rem;
+            word-wrap: normal;
+        }
+
+        #giochi{
+            min-width: 290px;
+        }
     
-}
-img{
-    max-width: 380px;
-    max-height: auto;
-}
-.titolo{
-    grid-area: header;
-}
+        #giochi_popolari{
+            overflow: auto;
+            width: 1290px;
+            height: auto;
+        }
+    }
 
-.menu{
-   grid-area: menu;
-}
+    @media screen and (max-width:1399.9px) and (min-width:1200px) {
+        #paneltop5 {
+            overflow: auto;
+            width: 280px;
+            height: 470px;
+        }
 
-.giochi{
-    grid-area: main;
-}
+        #top_name {
+            font-size: 0.8rem;
+            word-wrap: normal;
+        }
 
-.fine{
-    grid-area: footer;
-}
+        #giochi{
+            min-width: 290px;
+        }
+    
+        #giochi_popolari{
+            overflow: auto;
+            width: 1110px;
+            height: auto;
+        }
+    }
 
-.menu .genere{
-    text-align: center;
-    border-bottom: 1px solid white;
-    cursor: pointer;
-}
-.menu .genere:hover{
-    background-color: rgba(32, 33, 22, 0.512);
-}
+    @media screen and (max-width:1199.9px) and (min-width:1025px) {
+        #paneltop5 {
+            overflow: auto;
+            width: 240px;
+            height: 390px;
+        }
 
-.layout {
-    display:grid;
-    grid: 'header header header header'
-            'menu main main main'
-            'footer footer footer footer';
-    grid-template-rows: 0.2fr 3fr 0.2fr;
-    grid-template-columns:0.2fr 1.8fr 1.8fr auto;
-    column-gap: 20px;
-    row-gap: 5px;
-    align-content: center;
-    justify-content: center;
-    grid-auto-flow: column;
-    position: relative;
-}
+        #top_name {
+            font-size: 0.3rem;
+            word-wrap: normal;
+        }
 
-.layout .giochi .img{
-    padding: 0px 0px;
-    width: 384px;
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.5);
+        #giochi{
+            min-width: 240px;
+        }
+    
+        #giochi_popolari{
+            overflow: auto;
+            width: 930px;
+            height: auto;
+        }
+    }
 
-}
+    @media screen and (max-width:1024px) and (min-width:992px) {
+        #paneltop5 {
+            overflow: auto;
+            width: 240px;
+            height: 390px;
+        }
 
-.layout .giochi .img:hover{
-    opacity: 0.7;
-    background-color: rgba(255, 250, 250, 0.504);
-    box-shadow:2px 2px 2px 2px rgba(245, 245, 245, 0.896);
-   
-}
+        #top_name {
+            font-size: 0.3rem;
+            word-wrap: normal;
+        }
 
-.giochi .img#FIFA23{
-    position: absolute;
-    left: 200px;
-    top: 202px;
-}
+        #giochi{
+            min-width: 230px;
+        }
+    
+        #giochi_popolari{
+            overflow: auto;
+            width: 930px;
+            height: auto;
+        }
 
-.giochi .img#gta5{
-    position: absolute;
-    left: 610px;
-    top: 202px;
-}
+        .card-title{
+            font-size: 1rem;
+        }
 
-.giochi .img#red{
-    position: absolute;
-    left: 1020px;
-    top: 200px;
-}
+        .card-text{
+            font-size: 1rem;
+        }
 
-*{
-    box-sizing: border-box;
-}
+        a.btn{
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width:991.9px) and (min-width:768px) {
+        #paneltop5 {
+            overflow: auto;
+            width: 180px;
+            height: 290px;
+        }
+
+        #top_name {
+            font-size: 0.1rem;
+            word-wrap: normal;
+        }
+
+        #giochi{
+            min-width: 200px;
+        }
+    
+        #giochi_popolari{
+            overflow: auto;
+            width: 690px;
+            height: auto;
+        }
+
+        .card-title{
+            font-size: 0.6rem;
+        }
+
+        .card-text{
+            font-size: 0.6rem;
+        }
+
+        a.btn{
+            font-size: 0.6rem;
+        }
+    }
+
+    @media screen and (max-width:767.9px) and (min-width:576px) {
+        
+        #giochi_gratis .mask{
+            width: 75% !important;
+        }
+
+        #title_sezione{
+            font-size: 0.8rem;
+        }
+
+        #paneltop5 {
+            overflow: auto;
+            width: auto;
+            height: 350px;
+        }
+
+        #top_name {
+            font-size: 0.3rem;
+            word-wrap: normal;
+        }
+
+        #giochi{
+            min-width: 190px;
+        }
+    
+        #giochi_popolari{
+            overflow: auto;
+            width: 515px;
+            height: auto;
+        }
+
+        .card-title{
+            font-size: 0.4rem;
+        }
+
+        .card-text{
+            font-size: 0.4rem;
+        }
+
+        a.btn{
+            font-size: 0.4rem;
+        }
+    }
+
+    @media screen and (max-width:575.9px) and (min-width:320px) {
+        #paneltop5 {
+            overflow: auto;
+            width: auto;
+            height: 350px;
+        }
+
+        #top_name {
+            font-size: 0.1rem;
+            word-wrap: normal;
+        }
+
+        #giochi{
+            min-width: 180px;
+        }
+    
+        #giochi_popolari{
+            overflow: auto;
+            width: auto;
+            height: auto;
+        }
+        .card-title{
+            font-size: 0.2rem;
+        }
+
+        .card-text{
+            font-size: 0.2rem;
+        }
+
+        a.btn{
+            font-size: 0.2rem;
+        }
+
+        #giochi_gratis .card-title{
+            font-size: 1rem;
+        }
+
+        #giochi_gratis .card-text{
+            font-size: 1rem;
+        }
+
+        #giochi_gratis a.btn{
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width:319.9px) {
+
+        html,
+        body#home {
+            min-width: 320px;
+        }
+
+        #giochi{
+            min-width: 140px;
+        }
+    
+        #giochi_popolari{
+            overflow: auto;
+            width: auto;
+            height: auto;
+        }
+        
+        .card-title{
+            font-size: 0.1rem;
+        }
+
+        .card-text{
+            font-size: 0.1rem;
+        }
+
+        a.btn{
+            font-size: 0.1rem;
+        }
+
+        #giochi_gratis .card-title{
+            font-size: 0.8rem;
+        }
+
+        #giochi_gratis .card-text{
+            font-size: 0.8rem;
+        }
+
+        #giochi_gratis a.btn{
+            font-size: 0.8rem;
+        }
+    }
+    
+
+
+    #mask:hover{
+        background-color: #ffffffb0;
+        border-radius: 12px;
+    }
+    #img_giochi_popolari:hover{
+        opacity: 0.6;
+    }
+
+    #giochi_gratis a.btn    {
+        border-bottom: solid 3px #e1e1e1d6;
+    }
+
+    #giochi_gratis a.btn:hover{
+        border-bottom: solid 3px #0062ff;
+    }
+
+    .footer{
+        background: #202020;
+    }

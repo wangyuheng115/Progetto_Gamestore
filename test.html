@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="kartik-v-bootstrap-star-rating-46c21f5/css/star-rating.css" media="all" type="text/css"/>
+    <link rel="stylesheet" href="kartik-v-bootstrap-star-rating-46c21f5/themes/krajee-svg/theme.css" media="all" type="text/css"/>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="kartik-v-bootstrap-star-rating-46c21f5/js/star-rating.js"></script>
+    <script src="kartik-v-bootstrap-star-rating-46c21f5/themes/krajee-svg/theme.js"></script>
+    <script src="kartik-v-bootstrap-star-rating-46c21f5/js/locales/LANG.js"></script>
+
+    <script>
+    </script>
+</head>
+
+<body>
+    <h1>Bootstrap Star Rating Example</h1>
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-sm-12">
+                <input id="input-2" name="input-2" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1">
+                <input id="valutazione" name="input-3" value="4.6" class="rating-loading" data-size="xs">
+                </div>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+    $('#valutazione').rating({displayOnly: true, step: 0.1});
+});
+
+    </script>
+</body>
+
+</html>

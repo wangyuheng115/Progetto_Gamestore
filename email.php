@@ -1,5 +1,23 @@
 <?php
 session_start();
+
+$lang=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
+
+$lang=strtolower(substr($lang,0,2));
+
+if($lang=="it"){
+    include("languages/it.php");
+}
+elseif($lang=="fr"){
+    include("languages/fr.php");
+}
+else if ($lang=="en"){
+    include("languages/en.php");
+}
+else if ($lang=="zh"){
+    include("languages/zh.php");
+}
+
     $host='localhost';
 	$user='root';
 	$pw='';
@@ -9,9 +27,9 @@ session_start();
     
     if(isset($_POST['trova'])){
     $to=$_POST['Email'];
-   $subject = "Ritrova password";
+   $subject = $rpw['title'];
    $code = rand(1000,9999); 
-   $message = "Il tuo codice è: $code";
+   $message = $rpw['msg'].$code;
    $from = "wangyuheng115@gmail.com";
    $headers = "From: $from";
   
@@ -24,7 +42,7 @@ session_start();
     ";
     mysqli_query($conn,$sql);
     
-    echo"<script type='text/javascript'>alert('Codice inviato!'); location='Verifica_code.php';</script>";
+    echo"<script type='text/javascript'>alert('".$rpw['alert']."'); location='Verifica_code.php';</script>";
     };
 ?>
 
