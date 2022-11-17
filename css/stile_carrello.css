@@ -1,19 +1,84 @@
 html,
 body {
-    background-image: linear-gradient(to right, rgb(82, 65, 65),rgba(165, 158, 182, 0.849));
+    background-color: rgba(18, 18, 18);
     color: #ffffff;
     font-family: consolas;
     font-size: 20px;
     margin: 0;
 }
-
-a{
-    text-decoration: none;
+img {
+    border-radius: 12px;
     cursor: pointer;
-    color: #ffffff;
 }
 
-.lista .giochi .gioco .seleziona {
-    width: 300px;
-    height: 300px;
+#top_5:hover {
+    background: #d5d5d599;
+}
+
+#select_nav:hover {
+    color: #ffffff !important;
+    border-bottom: solid 3px #0062ff;
+}
+
+#Utente {
+    background: url(../img/icon_login_white.png);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0);
+    background-size: 40px;
+    border: 0px;
+}
+
+.Utente {
+    position: absolute;
+    right: -20px;
+}
+
+
+#Utente:hover {
+    opacity: 0.7;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+
+}
+
+#top_name {
+    font-size: 0.8rem;
+    word-wrap: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    /**/
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(239, 239, 239);
+    border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #333;
 }

@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+if(!isset($_SESSION["email"])){
+	$email="Loggare qui";
+}
+else{
+	$email = $_SESSION['email'];
+}
+
 $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 
 $lang = strtolower(substr($lang, 0, 2));
@@ -29,6 +38,7 @@ if ($lang == "it") {
 </head>
 
 <body id="home">
+	<div class="wrap">
 	<div class="container-sm">
 		<div class="row">
 			<nav class="nav navbar-expand-lg bg-dark navbar-dark fixed-top">
@@ -41,6 +51,7 @@ if ($lang == "it") {
 					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
@@ -74,18 +85,20 @@ if ($lang == "it") {
 						</li>
 					</ul>
 				</div>
+				
+				<div id="salute" class="user_name d-flex justify-content-end align-self-center pe-5" style="display: block !important; max-width: 300px; overflow: hidden !important; text-overflow : ellipsis !important;">
+				
+				</div>
 				<div class="Utente">
-					<form action="home_page.php" method="post" class="d-flex position-absolute end-0 pt-5">
-						<input type="button" name="Utente" id="Utente" value=""
-							class="position-absolute top-50 end-0 translate-middle dropdown-toggle"
-							data-bs-toggle="dropdown" aria-expanded="false">
+					<form action="db/Verifica_logout.php" method="post" class="d-flex position-absolute end-0 pt-5">
+						<input type="button" name="Utente" id="Utente" value="" class="position-absolute top-50 end-0 translate-middle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 						<ul class="dropdown-menu" aria-labelledby="Utente">
 							<li><a class="dropdown-item" href="#"><?php echo($index["Lista_del_desiderio"]); ?></a></li>
 							<li><a class="dropdown-item" href="#"><?php echo($index["Profilo_Personale"]); ?></a></li>
 							<li>
 								<hr class="dropdown-divider">
 							</li>
-							<li><input class="dropdown-item" type="submit" value="<?php echo($index["logout"]); ?>"></li>
+							<li><input name="logout" class="dropdown-item" type="submit" value="<?php echo($index["logout"]); ?>"></li>
 						</ul>
 					</form>
 				</div>
@@ -351,7 +364,8 @@ if ($lang == "it") {
 			</div>
 		</div>
 	</div>
-
+	<div class="push"></div>
+	</div>
 	<div class="footer mt-5">
 		<div class="container">
 			<div class="row pt-3 mt-5 g-0">
@@ -367,7 +381,7 @@ if ($lang == "it") {
 			</div>
 
 			<div class="row mt-3">
-				<div class="col-sm-3">
+				<div class="col-xl-3">
 					<span class="text-secondary"><?php echo($index["Dettagli_del_contatto"]); ?></span>
 					<div class="row mt-2 text-start">
 						<p>Email:<a href="mailto:GameStore@gmail.com">GameStore@gmail.com</a></p>
@@ -375,7 +389,7 @@ if ($lang == "it") {
 					</div>
 				</div>
 
-				<div class="col-sm-3">
+				<div class="col-xl-3">
 					<span class="text-secondary"><?php echo($index["Di_gamestore"]); ?></span>
 					<div class="row mt-2">
 						<a href="#"><?php echo($index["Chi_siamo"]); ?></a>
@@ -387,12 +401,21 @@ if ($lang == "it") {
 				<div class="col">
 					<span class="text-secondary" style="font-size: 0.9rem;"><?php echo($index["Copyright"]); ?>   </span>
 
-					<h1 class="small text-end"><img src="img/logo.png" width="50px" title="GameStore"><?php echo($index["Gioco"]); ?><span
-						style="color: red;"><?php echo($index["Store"]); ?></span></h1>
+					<h1 class="small text-end"><img src="img/logo.png" width="50px" title="GameStore">Game<span
+						style="color: red;">Store</span></h1>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script src="react/react.production.min.js"></script>
+    <script src="react/react-dom.production.min.js"></script>
+    <script src="react/babel.min.js"></script>
+	<script type="text/babel">
+		 const salut = <p align="center" style={{fontSize:"5px"}}>Ciao! <?php echo $email;?></p>
+
+		 ReactDOM.render(salut,document.getElementById("salute"))
+	</script>
 </body>
 
 </html>

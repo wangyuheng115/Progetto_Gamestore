@@ -1,4 +1,6 @@
 <?php
+	 session_start();
+	 $email=$_SESSION['email'];
 
     $lang=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
 
@@ -6,19 +8,19 @@
 
     if($lang=="it"){
         include("languages/it.php");
-		echo '<script src="js/Controlla_campo_it.js"></script>';
+		echo '<script src="js/Conferma_pw_it.js"></script>';
     }
     elseif($lang=="fr"){
         include("languages/fr.php");
-		echo '<script src="js/Controlla_campo_fr.js"></script>';
+		echo '<script src="js/Conferma_pw_fr.js"></script>';
     }
     else if ($lang=="en"){
         include("languages/en.php");
-		echo '<script src="js/Controlla_campo_en.js"></script>';
+		echo '<script src="js/Conferma_pw_en.js"></script>';
     }
     else if ($lang=="zh"){
         include("languages/zh.php");
-		echo '<script src="js/Controlla_campo_zh.js"></script>';
+		echo '<script src="js/Conferma_pw_zh.js"></script>';
     }
 
 ?>
@@ -46,15 +48,6 @@
 		</div>
 	
 		<form action="Verifica_cambia.php" method="post" enctype="application/x-www-form-urlencoded">
-			<div class="row">
-				<div class="col-sm-6 offset-sm-3 col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3">
-						<div class="form-floating">
-							<input type="email" name="Email" id="email" required="required" class="form-control" placeholder="Inserisci Email" style="border: 0; border-bottom:2px solid black ; background: rgba(0 ,0 , 0, 0%);">
-							<label for="email"><?php echo $login['email'];?></label>
-						</div>
-						<p id="controll_email" style="font-size: 18px;" align="center"></p>
-				</div>
-			</div>
 			
 			<div class="row">
 				<div class="col-sm-6 offset-sm-3 col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3">
@@ -90,7 +83,7 @@
 			$('#password').one("focus",function(){
 				document.getElementById("controll_password").innerHTML=("<div class='alert alert-danger'><?php echo $rpw['reg_pw'];?></div>");
 						var pw = document.querySelectorAll("input");
-						pw[1].style.border = "solid 2px #f00";
+						pw[0].style.border = "solid 2px #f00";
 					});
     			});
 
@@ -102,33 +95,16 @@
    				 if(reg_pw.test(password) == true){
 					document.getElementById("controll_password").innerHTML=("<div class='alert alert-success'><?php echo $rpw['validepw'];?></div>");
        				var pw = document.querySelectorAll("input");
-					pw[1].style.border = "solid 2px #53E652";
+					pw[0].style.border = "solid 2px #53E652";
     				}
 					else{
 						document.getElementById("controll_password").innerHTML=("<div class='alert alert-danger'><?php echo $rpw['reg_pw'];?></div>");
 						var pw = document.querySelectorAll("input");
-						pw[1].style.border = "solid 2px #f00";
+						pw[0].style.border = "solid 2px #f00";
 					}
     		
-		});
+			});
 		})
-
-        $('#email').blur(function(){
-			 var email = $('#email').val();
-			
-			 $.post("./db/Verifica_email.php",{Email: email},function(data){
-				if(data.trova === 0){
-					var email = document.querySelectorAll("input");
-					email[0].style.border = "solid 2px #f00";
-					document.getElementById("controll_email").innerHTML = "<font color=#f00><?php echo $rpw['noemail'];?>";
-				}
-				else{
-						document.getElementById("controll_email").innerHTML = "<font color=#53E652><?php echo $rpw['validemail'];?></font>";
-						var email = document.querySelectorAll("input");
-						email[0].style.border = "solid 2px #53E652";
-				}
-			 },"json");
-		});	
 	</script>
 </body>
 

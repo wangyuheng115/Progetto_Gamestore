@@ -1,7 +1,9 @@
 <?php
-include("db/database_manager.class.php");
-include("email.php");
+ session_start();
+ $email=$_SESSION['email'];
+
 if(!isset($_POST['Code'])){
+
 $lang=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
 
 $lang=strtolower(substr($lang,0,2));
@@ -18,10 +20,12 @@ else if ($lang=="en"){
 else if ($lang=="zh"){
     include("languages/zh.php");
 }
-$client = new DatabaseManager();
-$client->cancella("email_verifica","code='$code'");
+    $conn_mongo = new MongoDB\Driver\Manager("mongodb://localhost:27017");
+    $input = new MongoDB\Driver\BulkWrite;
+    $input->delete(["Email_Utente"=>$email],["limit"=>"1"]);
+    $conn_mongo->executeBulkWrite("Verifica.Codes",$input);
 
-echo"<script type='text/javascript'>alert('".$rpw['msgscade']."'); location='Ritrova_pw.php';</script>";
+    echo"<script type='text/javascript'>alert('".$rpw['msgscade']."'); location='Ritrova_pw.php';</script>";
      
-    }  
+}  
     ?>

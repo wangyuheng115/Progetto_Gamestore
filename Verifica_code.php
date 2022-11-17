@@ -1,4 +1,6 @@
 <?php
+ session_start();
+ $email=$_SESSION['email'];
 
     $lang=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
 
@@ -60,10 +62,10 @@
 		})
 
 
-        setTimeout("Scade()",1000*60*5);
+        setTimeout("Scade()",10000);
         function Scade(){
-            alert("Code scaduto!");
-            location("Codescade.php");
+		/*alert("Code scaduto!"); */
+		location='Code_scade.php';
         }
 		
 	</script>

@@ -5,7 +5,18 @@
         font-family: consolas;
         font-size: 20px;
         margin: 0;
+        height: 100%;
     }
+
+        #wrap {
+        min-height: 100%;
+        height: auto !important;
+        margin: 0 auto -200px;
+        }
+
+        #push{
+        height: 200px;
+        }
 
     img {
         border-radius: 12px;
@@ -110,6 +121,20 @@
             width: 1290px;
             height: auto;
         }
+
+        #demoimg{
+            overflow: auto;
+            width: 740px;
+            height: auto;
+        }
+
+        #title{
+            font-size: 2rem;
+        }
+
+        #descrizione{
+            font-size: 1.5rem;
+        }
     }
 
     @media screen and (max-width:1399.9px) and (min-width:1200px) {
@@ -133,6 +158,20 @@
             width: 1110px;
             height: auto;
         }
+
+        #demoimg{
+            overflow: auto;
+            width: 630px;
+            height: auto;
+        }
+
+        #title{
+            font-size: 2rem;
+        }
+
+        #descrizione{
+            font-size: 1.5rem;
+        }
     }
 
     @media screen and (max-width:1199.9px) and (min-width:1025px) {
@@ -155,6 +194,19 @@
             overflow: auto;
             width: 930px;
             height: auto;
+        }
+        #demoimg{
+            overflow: auto;
+            width: 530px;
+            height: auto;
+        }
+
+        #title{
+            font-size: 1.5rem;
+        }
+
+        #descrizione{
+            font-size: 1rem;
         }
     }
 
@@ -191,6 +243,24 @@
         a.btn{
             font-size: 1rem;
         }
+
+        btn.btn{
+            font-size: 1rem;
+        }
+
+        #demoimg{
+            overflow: auto;
+            width: 530px;
+            height: auto;
+        }
+
+        #title{
+            font-size: 1.5rem;
+        }
+
+        #descrizione{
+            font-size: 1rem;
+        }
     }
 
     @media screen and (max-width:991.9px) and (min-width:768px) {
@@ -225,6 +295,24 @@
 
         a.btn{
             font-size: 0.6rem;
+        }
+
+        button.btn{
+            font-size: 0.6rem;
+        }
+
+        #demoimg{
+            overflow: auto;
+            width: 400px;
+            height: auto;
+        }
+
+        #title{
+            font-size: 1.2rem;
+        }
+
+        #descrizione{
+            font-size: 1rem;
         }
     }
 
@@ -270,6 +358,42 @@
         a.btn{
             font-size: 0.4rem;
         }
+
+        button.btn{
+            font-size: 0.4rem;
+        }
+
+        #demoimg{
+            overflow: auto;
+            width: 290px;
+            height: auto;
+        }
+
+        #pagamento{
+            font-size: 0.1rem;
+        }
+
+        #pagamento #btn{
+            font-size: 0.1rem;
+        }
+        #myBtn{
+            font-size: 0.1rem;
+        }
+        #title{
+            font-size: 1rem;
+        }
+
+        #descrizione{
+            font-size: 1rem;
+        }
+
+        #text{
+            font-size: 0.5rem;
+        }
+
+        #specifiche{
+            font-size: 0.5rem;
+        }
     }
 
     @media screen and (max-width:575.9px) and (min-width:320px) {
@@ -305,6 +429,10 @@
             font-size: 0.2rem;
         }
 
+        button.btn{
+            font-size: 0.2rem;
+        }
+
         #giochi_gratis .card-title{
             font-size: 1rem;
         }
@@ -314,6 +442,18 @@
         }
 
         #giochi_gratis a.btn{
+            font-size: 1rem;
+        }
+
+        #img_rig{
+           display: none;
+        }
+
+        #title{
+            font-size: 1rem;
+        }
+
+        #descrizione{
             font-size: 1rem;
         }
     }
@@ -347,6 +487,10 @@
             font-size: 0.1rem;
         }
 
+        button.btn{
+            font-size: 0.1rem;
+        }
+
         #giochi_gratis .card-title{
             font-size: 0.8rem;
         }
@@ -358,6 +502,18 @@
         #giochi_gratis a.btn{
             font-size: 0.8rem;
         }
+
+        #title{
+            font-size: 1rem;
+        }
+
+        #descrizione{
+            font-size: 1rem;
+        }
+
+        #img_rig{
+            display: none;
+         }
     }
     
 

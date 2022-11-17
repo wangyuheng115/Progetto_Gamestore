@@ -25,8 +25,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Game_store_Loginpage</title>
-    <link rel="stylesheet" href="css/stile_login.css" media="screen">
+    
     <link rel="stylesheet" href="css_bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/stile_login.css" media="screen">
     <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">  -->
     <script src="js/login_view_pw.js"></script>
 

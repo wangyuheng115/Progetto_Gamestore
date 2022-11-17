@@ -23,12 +23,18 @@ if (isset($_POST['registra'])) {
 } 
 
 else if (isset($_POST['login'])) {
-  
+    
     $trovato = $client->leggi('utenti', "Email='$email' and Password='$pass'", "Email", "1", "Email,Password");
     if ($trovato == false) {   
         $msg="../login.php?msg=error";
         header("location:$msg");
     }
-    echo "<script type='text/javascript'>alert('Accesso riuscito!'); location='../home_page.php';</script>";
+
+    else{
+        session_start();
+        $_SESSION['email']=$email;
+
+         echo "<script type='text/javascript'>alert('Accesso riuscito!'); location='../home_page.php';</script>";
+    }
 }
 ?>

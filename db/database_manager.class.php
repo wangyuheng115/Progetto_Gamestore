@@ -101,7 +101,7 @@
     }
 
     public function eseguiQuery($query){
-        mysqli_query(DatabaseManager::$istanza_connessione->getConnessione(),"SET NAMES ‘utf8'");
+        mysqli_query(DatabaseManager::$istanza_connessione->getConnessione(),"SET NAMES 'utf8'");
 
 
         $rs=mysqli_query(DatabaseManager::$istanza_connessione->getConnessione(),$query);
@@ -128,12 +128,12 @@
         //lettura dei dati da inserire
         foreach($dati as $key => $valore){
             $valore=trim($this->pulisciStringa($valore));
-            $set.=$key."=‘".$valore."',";
+            $set.=$key."=".$valore."',";
           //  $tentativoIniezione=$this->tryInjection($valore);
         }
         //eliminazione dell'ultima virgola
         $set=substr($set,0,-1);
-        mysqli_query(DatabaseManager::$istanza_connessione->getConnessione(),"SET NAMES ‘utf8'");
+        mysqli_query(DatabaseManager::$istanza_connessione->getConnessione(),"SET NAMES 'utf8'");
         //completamento query
         $query.=" set ".$set.$where;
         

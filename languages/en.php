@@ -21,12 +21,18 @@ $reg = array(
      "invalidemail" => "Invalid email!"
 );
 //carrello
-$index = ["Svuota carrello"];
-$index["Svuota carrello"] = "Empty Cart";
-$index["Articoli"] = "Articles";
+$index["title_page_carrello"] = "Cart";
 $index["Prezzo"] = "Price";
-$index["Prezzo_totale"] = "Total price";
-$index["Checkout"] = "Checkout";
+$index["Prezzo_totale"] = "Subtotal";
+$index["Checkout"] = "CHECK OUT";
+$index["Rimuovi"] = "Remove";
+$index["title_carrello"]="My Cart";
+$index["tipo"]="BASE GAME";
+$index["stat_select"]="Selected";
+$index["stat_noselect"]="Not Selected";
+$index["descrizione"]="Games and Apps Summary";
+$index["tasse"]="Taxes";
+$index["dichiara_tasse"]="Calculated at Checkout";
 //homepage
 $index["Gioco"] = "Game";
 $index["Store"] = "Store";
@@ -70,6 +76,7 @@ $index["Copyright"] = "Â© 2022 GameStore, Inc. All rights reserved. Game Store
 
 $index["Telefono"] = "Telephone";
 $index["Ricerca"] = "Search";
+$index["Rimuovi"] = "Remove";
 
 //dettagliogioco
 $dettagligioco['titolo']="Dying Light 2 Stay Human Buy and Download";
@@ -107,4 +114,22 @@ $dettagligioco['expandedtext']="Plagued by memories you can't understand, you se
 $dettagligioco['expandbutt']="SHOW MORE";
 $dettagligioco['less']="SHOW LESS";
 $dettagligioco['refund']="Learn more about refunds";
+$dettagligioco['share']="SHARE";
+$dettagligioco['report']="REPORT";
+$dettagligioco['text']="The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive, and reshape the world. Your choices matter.";
 
+$config=array(
+     "min"=>"Minimum",
+     "consigli"=>"Recommended",
+     "so"=>"OS version",
+     "procesor"=>"CPU",
+     "memoria"=>"Memory",
+     "archiviazione"=>"Storage",
+     "scheda_video"=>"GPU",
+     "lang_sup"=>"Languages Supported",
+     "language"=>"AUDIO: English, Russian, Polish, French, German, Spanish - Spain, Spanish - Latin America, Portuguese - Brazil, Japanese, Chinese - Simplified<br>
+     TEXT: English, French, Italian, German, Spanish - Spain, Korean, Polish, Portuguese - Brazil, Russian, Spanish - Latin America, Arabic, Chinese - Simplified, Chinese - Traditional, Japanese, Portuguese, Turkish, Czech
+     ",
+     "author"=>"Dying Light® 2 © Techland S.A. Published and developed by Techland S.A. All trademarks, copyrights and logos are property of their respective owners. All rights reserved."
+   );
+?>

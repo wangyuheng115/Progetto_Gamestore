@@ -15,11 +15,18 @@
 $reg=array("title"=>"注册","age"=>"年龄","hobby"=>"爱好","country"=>"国家","return"=>"返回登入","exsistemail"=>"邮箱已被注册！",
             "invalidemail"=>"邮箱无效！");
 //carrello
-$index["Svuota carrello"] = "清空购物车";
-$index["Articoli"] = "游戏";
+$index["title_page_carrello"] = "购物车";
 $index["Prezzo"] = "价格";
 $index["Prezzo_totale"] = "总计";
-$index["Checkout"] = "付款";
+$index["Checkout"] = "去付款";
+$index["Rimuovi"] = "移除";
+$index["title_carrello"]="我的购物车";
+$index["tipo"]="普通游戏";
+$index["stat_select"]="已选中";
+$index["stat_noselect"]="未选中";
+$index["descrizione"]="游戏和应用概览";
+$index["tasse"]="税费";
+$index["dichiara_tasse"]="付款时计算";
 //homepage
 $index["Gioco"]= "游戏";
 $index["Store"]= "商城";
@@ -87,4 +94,21 @@ $dettagligioco['expandedtext']="被无法破解的记忆所困扰，你开始寻
 $dettagligioco['expandbutt']="展开";
 $dettagligioco['less']="收起";
 $dettagligioco['refund']="了解更多有关退款的详情";
+$dettagligioco['share']="分享";
+$dettagligioco['report']="报告";
+$dettagligioco['text']="病毒肆虐，人类文明重返黑暗时代。这座城市是人类仅存的聚居地之一，现在已到崩溃边缘。利用你的敏捷和战斗技能生存下去，重塑世界。你的选择至关重要。";
+
+$config=array(
+    "min"=>"最低配置",
+    "consigli"=>"推荐配置",
+    "so"=>"操作系统",
+    "procesor"=>"处理器",
+    "memoria"=>"Ram",
+    "archiviazione"=>"内存",
+    "scheda_video"=>"显卡",
+    "lang_sup"=>"支持的语言",
+    "language"=>"音频: 不适用<br>
+    文本: English, French, Italian, German, Spanish (Spain), Japanese, Korean, Chinese (Simplified), Chinese (Traditional), Portuguese (Brazil), Russian",
+    "author"=>"Dying Light® 2 © Techland S.A. Published and developed by Techland S.A. All trademarks, copyrights and logos are property of their respective owners. All rights reserved."
+  );
 ?>

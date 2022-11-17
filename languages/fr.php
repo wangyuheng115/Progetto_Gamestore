@@ -16,11 +16,18 @@
                 "invalidemail"=>"Email invalide!");
 
                 //carrello
-                $index["Svuota carrello"] = "Panier vide";
-                $index["Articoli"] = "Des articles";
+                $index["title_page_carrello"] = "Panier";
                 $index["Prezzo"] = "Prix";
-                $index["Prezzo_totale"] = "Prix total";
-                $index["Checkout"] = "Vérifier";
+                $index["Prezzo_totale"] = "Sous-total";
+                $index["Checkout"] = "ALLER AU PAIEMENT";
+                $index["Rimuovi"] = "Supprimer";
+                $index["title_carrello"]="Mon panier";
+                $index["tipo"]="JEU DE BASE";
+                $index["stat_select"]="Sélectionné";
+                $index["stat_noselect"]="Non sélectionné";
+                $index["descrizione"]="Résumé des jeux et applications";
+                $index["tasse"]="Impôts";
+                $index["dichiara_tasse"]="Calculé au moment du paiement";
                 //homepage
                 $index["Gioco"] ="Jeux";
                 $index["Genere"] ="Genre";
@@ -57,6 +64,7 @@
                 $index["Copyright"]= "© 2022 GameStore, Inc. Tous droits réservés. Game Store, le logo GameStore enregistré par GameStore, Inc. aux États-Unis et dans d'autres pays. Les autres marques ou noms de produits sont des marques déposées de leurs propriétaires respectifs. Transactions en dehors des États-Unis via Game Store International, S.r.l.";
                 $index["Ricerca"] = "Rechercher";
                 $index["Telefono"] = "Téléphoner";
+                $index["Rimuovi"] = "Retirer";
 
                 //dettagliogioco
 $dettagligioco['titolo']="Dying Light 2 Stay Human Acheter et télécharger maintenant";
@@ -86,6 +94,23 @@ $dettagligioco['expandedtext']="Hanté par des souvenirs que vous ne pouvez pas 
 $dettagligioco['expandbutt']="VOIR PLUS";
 $dettagligioco['less']="VOIR MOINS";
 $dettagligioco['refund']="En savoir plus sur les remboursements";
+$dettagligioco['share']="PARTAGER";
+$dettagligioco['report']="RAPPORT";
+$dettagligioco['text']="Le virus a gagné. La civilisation est revenue au Moyen Âge. La Ville, l'un des derniers grands refuges humains, est au bord de l'effondrement. Utilisez votre agilité et vos talents martiaux pour survivre et rebâtir le monde. Vos choix peuvent changer la donne.";
+
+$config=array(
+    "min"=>"Minimum",
+    "consigli"=>"Configuration recommandée",
+    "so"=>"Système d'exploitation",
+    "procesor"=>"Processeur",
+    "memoria"=>"Mémoire",
+    "archiviazione"=>"Stockage",
+    "scheda_video"=>"Carte graphique",
+    "lang_sup"=>"Langues disponibles",
+    "language"=>"AUDIO : anglais, russe, polonais, français, allemand, espagnol (Espagne), espagnol (Amérique latine), portugais (Brésil), japonais, chinois simplifié<br>
+    TEXTE : anglais, français, italien, allemand, espagnol (Espagne), coréen, polonais, portugais (Brésil), russe, espagnol (Amérique latine), arabe, chinois simplifié, chinois traditionnel, japonais, portugais, turc, tchèque",
+    "author"=>"Dying Light® 2 © Techland S.A. Published and developed by Techland S.A. All trademarks, copyrights and logos are property of their respective owners. All rights reserved."
+  );
 ?>
 
 

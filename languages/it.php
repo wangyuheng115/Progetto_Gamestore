@@ -9,17 +9,25 @@
     "alert"=>"Codice inviato!",
     "scadcode"=>"Codice sbagliato o scaduto!",
     "yescode"=>"Codice giusto!",
-    "msgscade"=>"Codice scaduto! Richiedi un'altra!",
+    "msgscade"=>"Codice scaduto! Richiedi un’altra!",
     "sucess"=>"Password cambiato!");
 
     $reg=array("title"=>"Registrazione","age"=>"Età","hobby"=>"Hobby","country"=>"Nazione","return"=>"Ritorno login","exsistemail"=>"Email già registrato!",
                 "invalidemail"=>"Email non valido!");
 //carrello
-$index["Svuota carrello"] = "Svuota carrello";
-$index["Articoli"] = "Articoli";
+$index["title_page_carrello"] = "Carrello";
 $index["Prezzo"] = "Prezzo";
-$index["Prezzo_totale"] = "Prezzo totale";
-$index["Checkout"] = "Checkout";
+$index["Prezzo_totale"] = "Totale parziale";
+$index["Checkout"] = "VAI AL PAGAMENTO";
+$index["Rimuovi"] = "Rimuovi";
+$index["title_carrello"]="Il mio carrello";
+$index["tipo"]="GIOCO DI BASE";
+$index["stat_select"]="Selezionato";
+$index["stat_noselect"]="Non Selezionato";
+$index["descrizione"]="Riepilogo di giochi e app";
+$index["tasse"]="Tasse";
+$index["dichiara_tasse"]="Calcolate al momento del pagamento";
+
 //homepage
 $index["Gioco"]= "Gioco";
 $index["Store"]= "Store";
@@ -63,6 +71,7 @@ USA tramite Game Store International, S.r.l.";
 $index["Ricerca"] = "Cerca";
 $index["Telefono"] = "Telefono";
 
+
 //dettagliogioco
 $dettagligioco['titolo']="Dying Light 2 Stay Human Acquistalo e Scaricalo subito";
 $dettagligioco['genere']="Genere";
@@ -91,4 +100,22 @@ $dettagligioco['expandedtext']="Tormentato da ricordi che non riesci a comprende
 $dettagligioco['expandbutt']="ESPANDI";
 $dettagligioco['less']="RIDUCI";
 $dettagligioco['refund']="Scopri di più sui rimborsi";
+$dettagligioco['share']="CONDIVIDI";
+$dettagligioco['report']="SEGNALA";
+$dettagligioco['text']="Il virus ha vinto e la civiltà è tornata a vivere un'epoca buia. La Città, uno degli ultimi grandi insediamenti umani, è a un passo dal collasso. Usa la tua agilità e la tua capacità di combattere per sopravvivere e ricostituire il mondo. Le tue scelte valgono.";
+$dettagligioco['specific']="Specifiche";
+
+$config=array(
+  "min"=>"Minime",
+  "consigli"=>"Consigliati",
+  "so"=>"SO",
+  "procesor"=>"Processore",
+  "memoria"=>"Memoria",
+  "archiviazione"=>"Archiviazione",
+  "scheda_video"=>"Scheda video",
+  "lang_sup"=>"Lingue supportate",
+  "language"=>"AUDIO: inglese, russo, polacco, francese, tedesco, spagnolo (Spagna), spagnolo (America Latina), portoghese brasiliano, giapponese, cinese semplificato<br>
+  TESTO: inglese, francese, italiano, tedesco, spagnolo (Spagna), coreano, polacco, portoghese brasiliano, russo, spagnolo (America Latina), arabo, cinese semplificato, cinese tradizionale, giapponese, portoghese, turco, ceco",
+  "author"=>"Dying Light® 2 © Techland S.A. Published and developed by Techland S.A. All trademarks, copyrights and logos are property of their respective owners. All rights reserved."
+);
 ?>
