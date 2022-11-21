@@ -15,19 +15,19 @@ function ConfermaPassword(){
     }
 }
 
-function VerificaEta(){
-    var eta = document.getElementById('eta').value;
-    var reg_eta=/^(([1-9])|([1-9]\d)|99)$/;
+function VerificaNickname(){
+    var name = document.getElementById('Nickname').value;
+    var reg_name=/^[A-Za-z0-9]{4,20}$/g;
 
-    if(reg_eta.test(eta) == true){
-        var eta = document.querySelectorAll("input");
-		eta[3].style.border = "solid 2px #53E652";
-        document.getElementById("controll_eta").innerHTML = "<font color=#53E652>Valido!";
+    if(reg_name.test(name) == true){
+        var name = document.querySelectorAll("input");
+		name[3].style.border = "solid 2px #53E652";
+        document.getElementById("controll_name").innerHTML = "<font color=#53E652>Nickname Valido!";
     }
     else{
-        var eta = document.querySelectorAll("input");
-		eta[3].style.border = "solid 2px #f00";
-        document.getElementById("controll_eta").innerHTML = "<font color=#f00>Inserisci una età corretta!";
+        var name = document.querySelectorAll("input");
+		name[3].style.border = "solid 2px #f00";
+        document.getElementById("controll_name").innerHTML = "<font color=#f00>Nickname non valido!";
     }
 }
 

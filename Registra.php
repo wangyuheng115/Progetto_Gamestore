@@ -89,41 +89,16 @@ if ($lang == "it") {
 						<div class="row">
 							<div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-8 offset-sm-2">
 								<div class="d-flex justify-content-center mt-3">
-									<div class="p-2 bg-primary"><?php echo $reg['age'];?></div>
-									<input type="text" id="eta" name="Eta" onkeyup="VerificaEta()" required="required"><br>
+									<div class="p-2 bg-primary">Nickname</div>
+									<input type="text" id="Nickname" name="Nickname" onkeyup="VerificaNickname()" required="required" minlength="4" maxlength="20"><br>
 								</div>
 
 								<div class="d-flex justify-content-center">
-									<span id="controll_eta" style="font-size: 18px;"></span>
+									<span id="controll_name" style="font-size: 18px;"></span>
 								</div>
 							</div>
 						</div>
 
-						<div class="row">
-							<div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-								<div class="d-flex justify-content-center mt-3">
-									<div class="p-2 bg-primary"><?php echo $reg['hobby'];?></div>
-									<input type="text" id="hobby" name="Hobby" onkeyup="VerificaHobby()" required="required"><br>
-								</div>
-
-								<div class="d-flex justify-content-center">
-									<span id="controll_hobby" style="font-size: 18px;"></span>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-								<div class="d-flex justify-content-center mt-3">
-									<div class="p-2 bg-primary"><?php echo $reg['country'];?></div>
-									<input type="text" id="nazione" name="Country" onkeyup="VerificaNazione()" required="required"><br>
-								</div>
-
-								<div class="d-flex justify-content-center">
-									<span id="controll_nazione" style="font-size: 18px;"></span>
-								</div>
-							</div>
-						</div>
 						<?php
 						if (isset($_GET['msg'])) {
 							echo "<p style='color: red;' align='center'>Email già registrato.</p>";
@@ -132,7 +107,7 @@ if ($lang == "it") {
 						<div class="row">
 							<div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-8 offset-sm-2">
 								<div class="d-flex justify-content-center mt-3">
-									<input type="submit" onclick="" name="registra" value="<?php echo $rpw['value'];?>" class="btn btn-primary btn-lg">
+									<input type="submit" name="registra" value="<?php echo $rpw['value'];?>" class="btn btn-primary btn-lg">
 									<div class="p-2"></div>
 									<input type="button" onclick="window.location.href='login.php'" value="<?php echo $reg['return'];?>" class="btn btn-primary btn-lg">
 								</div>

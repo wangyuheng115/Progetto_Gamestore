@@ -1,11 +1,14 @@
 <?php
+include("db/database_manager.class.php");
 session_start();
-
+$client = new DatabaseManager();
 if(!isset($_SESSION["email"])){
-	$email="Loggare qui";
+	$name="Loggare qui";
 }
 else{
 	$email = $_SESSION['email'];
+	$rls = $client->leggi('utenti', "Email='$email'", "Nickname", "1");
+	$name=$rls[0]["Nickname"];
 }
 
 $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
@@ -93,8 +96,8 @@ if ($lang == "it") {
 					<form action="db/Verifica_logout.php" method="post" class="d-flex position-absolute end-0 pt-5">
 						<input type="button" name="Utente" id="Utente" value="" class="position-absolute top-50 end-0 translate-middle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 						<ul class="dropdown-menu" aria-labelledby="Utente">
-							<li><a class="dropdown-item" href="#"><?php echo($index["Lista_del_desiderio"]); ?></a></li>
-							<li><a class="dropdown-item" href="#"><?php echo($index["Profilo_Personale"]); ?></a></li>
+							<li><a class="dropdown-item" href="carrello_page.php"><?php echo($index["Lista_del_desiderio"]); ?></a></li>
+							<li><a class="dropdown-item" href="Profilo.php"><?php echo($index["Profilo_Personale"]); ?></a></li>
 							<li>
 								<hr class="dropdown-divider">
 							</li>
@@ -212,12 +215,12 @@ if ($lang == "it") {
 					<div class="card align-items-center w-25 text-center"
 						style="width: 18rem; background: none; border: 0;" id="giochi">
 						<div class="mask w-75" id="mask">
-						<img src="img/fallout3.jpg" class="card-img-top w-100" alt="Fallout3" id="img_giochi_popolari">
+						<a href="DettagliGioco.php"><img src="img/dl2.jpg" class="card-img-top w-100" alt="Dying Light2" id="img_giochi_popolari"></a>
 						</div>
 						<div class="card-body">
-							<h5 class="card-title">Fallout 3: Game of the Year Edition</h5>
-							<p class="card-text">6,59€</p>
-							<a href="#" class="btn btn-primary"><?php echo($index["Scopri_di_piu"]); ?></a>
+							<h5 class="card-title">Dying Light2</h5>
+							<p class="card-text">59,59€</p>
+							<a href="DettagliGioco.php" class="btn btn-primary"><?php echo($index["Scopri_di_piu"]); ?></a>
 						</div>
 					</div>
 
@@ -412,7 +415,7 @@ if ($lang == "it") {
     <script src="react/react-dom.production.min.js"></script>
     <script src="react/babel.min.js"></script>
 	<script type="text/babel">
-		 const salut = <p align="center" style={{fontSize:"5px"}}>Ciao! <?php echo $email;?></p>
+		 const salut = <p align="center" style={{fontSize:"5px"}}>Ciao! <?php echo $name;?></p>
 
 		 ReactDOM.render(salut,document.getElementById("salute"))
 	</script>

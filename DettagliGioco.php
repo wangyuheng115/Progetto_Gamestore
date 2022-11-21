@@ -101,8 +101,8 @@ if ($lang == "it") {
 					<form action="home_page.php" method="post" class="d-flex position-absolute end-0 pt-5">
 						<input type="button" name="Utente" id="Utente" value="" class="position-absolute top-50 end-0 translate-middle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 						<ul class="dropdown-menu" aria-labelledby="Utente">
-							<li><a class="dropdown-item" href="#"><?php echo ($index["Lista_del_desiderio"]); ?></a></li>
-							<li><a class="dropdown-item" href="#"><?php echo ($index["Profilo_Personale"]); ?></a></li>
+							<li><a class="dropdown-item" href="carrello_page.php"><?php echo ($index["Lista_del_desiderio"]); ?></a></li>
+							<li><a class="dropdown-item" href="Profilo.php"><?php echo ($index["Profilo_Personale"]); ?></a></li>
 							<li>
 								<hr class="dropdown-divider">
 							</li>

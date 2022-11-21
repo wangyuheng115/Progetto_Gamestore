@@ -10,8 +10,7 @@
 
         #wrap {
         min-height: 100%;
-        height: auto !important;
-        margin: 0 auto -200px;
+        margin-bottom:-200px;
         }
 
         #push{
@@ -261,6 +260,10 @@
         #descrizione{
             font-size: 1rem;
         }
+
+        .ticket{
+            font-size: 0.8rem;
+        }
     }
 
     @media screen and (max-width:991.9px) and (min-width:768px) {
@@ -313,6 +316,10 @@
 
         #descrizione{
             font-size: 1rem;
+        }
+
+        .ticket{
+            font-size: 0.6rem;
         }
     }
 
@@ -394,6 +401,10 @@
         #specifiche{
             font-size: 0.5rem;
         }
+
+        .ticket{
+            font-size: 0.5rem;
+        }
     }
 
     @media screen and (max-width:575.9px) and (min-width:320px) {
@@ -456,6 +467,10 @@
         #descrizione{
             font-size: 1rem;
         }
+
+        .ticket{
+            font-size: 0.5rem;
+        }
     }
 
     @media screen and (max-width:319.9px) {
@@ -514,6 +529,10 @@
         #img_rig{
             display: none;
          }
+
+         .ticket{
+            font-size: 0.8rem;
+        }
     }
     
 

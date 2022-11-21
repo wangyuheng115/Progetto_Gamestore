@@ -75,7 +75,7 @@ if ($lang == "it") {
                         <input type="button" name="Utente" id="Utente" value="" class="position-absolute top-50 end-0 translate-middle dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <ul class="dropdown-menu" aria-labelledby="Utente">
                             <li><a class="dropdown-item" href="#"><?php echo ($index["Lista_del_desiderio"]); ?></a></li>
-                            <li><a class="dropdown-item" href="#"><?php echo ($index["Profilo_Personale"]); ?></a></li>
+                            <li><a class="dropdown-item" href="Profilo.php"><?php echo ($index["Profilo_Personale"]); ?></a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -86,16 +86,64 @@ if ($lang == "it") {
             </nav><br>
         </div>
 
+        <div class="shop-items">
+                <div class="shop-item">
+                <div class="row p-3 mb-3" style="background: #202020;">
+                    <div class="col-sm-3">
+                        <div class="mask w-100" id="mask">
+                            <img src="img/fallout3.jpg" class="w-100 shop-item-image" id="img_giochi_popolari">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <div class="row mt-3">
+                            <div class="col-sm-12 d-flex justify-content-between">
+                                <span class="badge bg-secondary"><?php echo $index['tipo']; ?></span>
+                                <span class="shop-item-price">29.99€</span>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-sm-12">
+                                <span class="shop-item-title">Cyberpunk 2077</span>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-sm-12 shop-item-details">
+                                <?php echo $dettagligioco['autorimborsabile']; ?><a href="#" data-bs-toggle="tooltip" data-bs-html="true" class="inf_rimborso" title="<span class='text-secondary small text-wrap'><?php echo $dettagligioco['refund']; ?></span>"><i class="bi bi-patch-question"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-sm-12 d-flex justify-content-between">
+                                <div class="piattform align-self-center">
+                                    <i class="bi bi-windows "></i>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-outline-danger  offset-md-10" id="btn"><?php echo $index['Rimuovi']; ?></button>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                    
+                </div>
+                        
+                    </div>
+                </div>
+
         <div class="row mt-5">
             <div class="col-sm-4">
                 <span id="title"><?php echo $index['title_carrello']; ?></span>
             </div>
         </div>
 
-        <div class="row mt-5">
-            <div class="col-sm-8">
 
-                <div class="row p-3 mb-3" style="background: #202020;">
+   
+        <div class="row mt-5">
+            <div class="col-sm-8 cart-items">
+
+                <div class="row p-3 mb-3 cart-item" style="background: #202020;">
                     <div class="col-sm-3">
                         <div class="mask w-100" id="mask">
                             <img src="img/dl2.jpg" class="w-100" id="img_giochi_popolari">
@@ -106,7 +154,7 @@ if ($lang == "it") {
                         <div class="row mt-3">
                             <div class="col-sm-12 d-flex justify-content-between">
                                 <span class="badge bg-secondary"><?php echo $index['tipo']; ?></span>
-                                <span class="price">59.99€</span>
+                                <span class="cart-price">59.99€</span>
                             </div>
                         </div>
 
@@ -127,19 +175,16 @@ if ($lang == "it") {
                                 <div class="piattform align-self-center">
                                     <i class="bi bi-windows "></i>
                                 </div>
-
-                                <div class="oper">
-                                    <a href="#" class="btn btn-outline-success active btn-sm" role="button" data-bs-toggle="button" aria-pressed="true" ng-click="statselect()"><span class="stat_select"><?php echo $index['stat_select']; ?></span></a>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" id="btn"><?php echo $index['Rimuovi']; ?></button>
-                                </div>
                             </div>
                         </div>
+                        <br>
+                        <button type="button" class="btn btn-outline-danger  offset-md-10" id="btn"><?php echo $index['Rimuovi']; ?></button>
                     </div>
+                    
                 </div>
+                
 
-
-
-                <div class="row p-3 mb-3" style="background: #202020;">
+                <div class="row p-3 mb-3 cart-item" style="background: #202020;">
                     <div class="col-sm-3">
                         <div class="mask w-100" id="mask">
                             <img src="img/fallout3.jpg" class="w-100" id="img_giochi_popolari">
@@ -150,7 +195,7 @@ if ($lang == "it") {
                         <div class="row mt-3">
                             <div class="col-sm-12 d-flex justify-content-between">
                                 <span class="badge bg-secondary"><?php echo $index['tipo']; ?></span>
-                                <span class="price">19.99€</span>
+                                <span class="cart-price">19.99€</span>
                             </div>
                         </div>
 
@@ -171,18 +216,15 @@ if ($lang == "it") {
                                 <div class="piattform align-self-center">
                                     <i class="bi bi-windows "></i>
                                 </div>
-
-                                <div class="oper">
-                                    <a href="#" class="btn btn-outline-success active btn-sm" role="button" data-bs-toggle="button" aria-pressed="true" ng-click="statselect()"><span class="stat_select"><?php echo $index['stat_select']; ?></span></a>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" id="btn"><?php echo $index['Rimuovi']; ?></button>
-                                </div>
                             </div>
                         </div>
+                        <br>
+                        <button type="button" class="btn btn-outline-danger  offset-md-10" id="btn"><?php echo $index['Rimuovi']; ?></button>
                     </div>
                 </div>
 
 
-                <div class="row p-3 mb-3" style="background: #202020;">
+                <div class="row p-3 mb-3 cart-item" style="background: #202020;">
                     <div class="col-sm-3">
                         <div class="mask w-100" id="mask">
                             <img src="img/naraka.jpg" class="w-100" id="img_giochi_popolari">
@@ -193,7 +235,7 @@ if ($lang == "it") {
                         <div class="row mt-3">
                             <div class="col-sm-12 d-flex justify-content-between">
                                 <span class="badge bg-secondary"><?php echo $index['tipo']; ?></span>
-                                <span class="price">19.99€</span>
+                                <span class="cart-price">19.99€</span>
                             </div>
                         </div>
 
@@ -214,13 +256,10 @@ if ($lang == "it") {
                                 <div class="piattform align-self-center">
                                     <i class="bi bi-windows "></i>
                                 </div>
-
-                                <div class="oper">
-                                    <a href="#" class="btn btn-outline-success active btn-sm" role="button" data-bs-toggle="button" aria-pressed="true" ng-click="statselect()"><span class="stat_select"><?php echo $index['stat_select']; ?></span></a>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" id="btn"><?php echo $index['Rimuovi']; ?></button>
-                                </div>
                             </div>
                         </div>
+                        <br>
+                        <button type="button" class="btn btn-outline-danger  offset-md-10" id="btn"><?php echo $index['Rimuovi']; ?></button>
                     </div>
                 </div>
 
@@ -251,23 +290,72 @@ if ($lang == "it") {
                             <hr>
                             <li class="list-group-item border-0 small" style="background: rgba(0,0,0,0);">
                                 <div class="d-flex justify-content-between">
-                                    <span class="text-white"><?php echo $index['Prezzo_totale']; ?></span>
-                                    <span class="text-white text-end">{{total}}€</span>
+                                    <span class="text-white"><?php echo $index['Prezzo_totale']; ?>:</span>
+                                    <span class="text-white text-end cart-total-price">€0</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-sm-12">
-                        <button class="btn btn-primary w-100"><?php echo $index['Checkout']; ?></button>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
+                <div class="row">
+                <button type="button" class="btn bg-primary text-white" data-bs-toggle="modal" data-bs-target="#mod_profilo">Checkout</button>
+                    <div class="col-sm-12">
+                    <div class="modal fade text-black modal-xl" id="mod_profilo" tabindex="-1" aria-labelledby="Modal" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="Modal"><i class="bi bi-pencil-square" style="color: black;"></i>Modifica Profilo</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+                                
+								<form action="db/use_db.php" method="post">
+									<div class="modal-body">
+										<div class="row">
+											<div class="col-md-12">
+												<label for="Email" class="form-label">Email</label>
+												<input value="Email" type="email" class="form-control" id="Email" enabled>
+											</div>
+
+											<div class="col-md-12">
+												<label for="Nickname" class="form-label">Titolare</label>
+												<input name="Titolare" value="Titolare della carta" type="text" class="form-control" id="Nickname" minlength="4" maxlength="20">
+											</div>
+
+											<div class="col-12">
+												<label for="Paese_o_Regione" class="form-label">Paese o Regione</label>
+												<input name="text" type="text" class="form-control" id="Introduzione" placeholder="Paese o Regione" maxlength="50" value="Paese o regione">
+											</div>
+
+											<div class="col-md-6">
+												<label for="Carta" class="form-label">Carta</label>
+												<input value="Carta" name="Carta di credito" type="text" class="form-control" id="Carta" placeholder="1234 1234 1234 1234" minlenght="19" maxlength="19">
+											</div>
+                                            <div class="col-md-6">
+												<label for="CVC" class="form-label">CVC</label>
+												<input value="CVC" name="CVC" type="text" class="form-control" id="CVC" placeholder="123" minlenght="3"maxlength="3">
+											</div>
+											<div class="col-md-6">
+												<label for="nascita" class="form-label">Data di scadenza</label>
+												<input value="Scadenza" name="Scadenza" type="month" class="form-control" id="nascita" placeholder="01/01/2022">
+											</div>
+										</div>
+									</div>
+
+									<div class="modal-footer text-center">
+										<input type="reset" class="btn btn-danger" value="Reset">
+										<input type="submit" class="btn btn-primary" value="Salva" name="salva">
+									</div>
+								</form>
+                             
+							</div>
+						</div>
+					</div>
+                    </div>
+                </div>
+    
+    
     <div id="push"></div>
     </div>
 
